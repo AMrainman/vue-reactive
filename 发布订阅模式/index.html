@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src="index.js"></script>
+  <script>
+    const event = new Event()
+    const fn1 = function(...args) {
+      console.log('hello', args)
+    }
+    const fn2 = function(...args) {
+      console.log('goodbye', args)
+    }
+    event.addEventListener('hello', fn1)
+    event.addEventListener('hello', fn2)
+    event.dispatchEvent('hello', '老梗')
+    event.dispatchEvent('hello', '老何')
+    event.removeEventListener('hello', fn1)
+  </script>
+</body>
+</html>
