@@ -26,20 +26,20 @@
     new Vue({
       el: '#app',
       data: {
-        name: "I am test.",
+        name: "我是初始化",
         age: 12,
         html: '<p>我是个p</p>'
       },
       mounted() {
         setTimeout(() => {
-          this.name = '我是测试'
+          this.name = '我是延迟一点五秒'
           this.html = '<p>哈啊哈哈哈哈哈哈</p>'
         }, 1500)
       },
       methods: {
         changeName() {
-          this.name = '哈喽，开课吧'
           this.age = '年年18岁'
+          this.name = '岁岁平安'
         }
       }
     })
